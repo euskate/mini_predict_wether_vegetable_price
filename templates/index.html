@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배추 가격 예측하기</title>
+</head>
+
+<body>
+  <section>
+    <h1>배추 가격 예측</h1>
+    <form action="/" method="POST">
+      <div>
+        <label for="avg_temp">평균 온도</label>
+        <input type="text" id="avg_temp" name="avg_temp" placeholder="평균 온도를 입력하세요.">
+      </div>
+      <div>
+        <label for="min_temp">최저 온도</label>
+        <input type="text" id="min_temp" name="min_temp" placeholder="최소 온도를 입력하세요.">
+      </div>
+      <div>
+        <label for="max_temp">최고 온도</label>
+        <input type="text" id="max_temp" name="max_temp" placeholder="최대 온도를 입력하세요.">
+      </div>
+      <div>
+        <label for="rain_fall">강수량</label>
+        <input type="text" id="rain_fall" name="rain_fall" placeholder="강수량을 입력하세요.">
+      </div>
+      <div>
+        <button type="submit">배추가격 예측</button>
+      </div>
+    </form>
+    {% if price %}
+    <strong>해당 기온의 배추의 예측 가격은 {{ price }}원입니다.</strong>
+    {% endif %}
+  </section>
+</body>
+
+</html>
